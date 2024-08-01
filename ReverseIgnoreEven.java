@@ -5,7 +5,13 @@ public class ReverseIgnoreEven {
         // Fill Out the Logic Here to print reversed number by ignoring even digits in a number
       // Example 1432 
       // print 31 as an Output by ignoring Even Digits and Reversing it
-      
+      String strNum = Integer.toString(number);
+        for (int i = strNum.length() - 1; i >= 0; i--) {
+            char digit = strNum.charAt(i);
+            if ((digit - '0') % 2 != 0) {
+                reversed = reversed * 10 + (digit - '0');
+            }
+        }
       return reversed;
     }
 
