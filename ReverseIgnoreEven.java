@@ -2,6 +2,17 @@ public class ReverseIgnoreEven {
 
     public static int reverseIgnoringEvenDigits(int number) {
         int reversed = 0;
+       while(number!=0){
+       
+        int rem=number%10;
+        if(rem%2==1){
+        reversed=reversed*10+rem;
+    }
+        number=number/10;
+
+     }
+        
+        
         // Fill Out the Logic Here to print reversed number by ignoring even digits in a number
       // Example 1432 
       // print 31 as an Output by ignoring Even Digits and Reversing it
