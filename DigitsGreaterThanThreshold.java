@@ -19,6 +19,5 @@ public class DigitsGreaterThanThreshold {
         int threshold = 3;
         int count = countDigitsGreaterThan(number, threshold);
         System.out.println("Count of digits greater than " + threshold + ": " + count);
-        DigitsGreaterThanThreshold a = new DigitsGreaterThanThreshold();
     }
 }
