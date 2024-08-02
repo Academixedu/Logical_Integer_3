@@ -5,12 +5,24 @@ public class ReverseIgnoreEven {
         // Fill Out the Logic Here to print reversed number by ignoring even digits in a number
       // Example 1432 
       // print 31 as an Output by ignoring Even Digits and Reversing it
+      while(number !=0)
+      {
+        int div=number%10;
+        if (!(div%2==0)) 
+        {
+          reversed=reversed*10+div;   
+        }
+        number=number/10;
+
+      }
       return reversed;
     }
 
     public static void main(String[] args) {
-        int number = 123456;
+        int number = 9854231;
         int result = reverseIgnoringEvenDigits(number);
+        System.out.println("--------------------------------------");
+        System.out.println("--------------------------------------");
         System.out.println("Reversed number excluding even digits: " + result);
     }
 }
