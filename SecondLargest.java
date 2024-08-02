@@ -4,13 +4,25 @@ public class SecondLargest {
         int largest = -1;
         int secondLargest = -1;
        // prepare a Logic to findout second largest digit of the number
-    }
-        return secondLargest;
-    }
+       
+       while(number>0){
+        int dig = number%10;
+        if(dig>largest){
+            largest=dig;
+        }
+        else if(dig>secondLargest && dig!=largest){
+            secondLargest=dig;
+        }
+        number=number/10;
 
+    }
+         return secondLargest;
+}
+    
     public static void main(String[] args) {
         int number = 123456;
         int secondLargest = findSecondLargestDigit(number);
         System.out.println("Second largest digit: " + secondLargest);
     }
-}
+       }
+    
